@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="education JS">
+  <title>Bike shop</title>
+  <meta name="description" content="Product List + Adaptive design">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="./pic/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="./pic/favicon-32x32.png">
+</head>
+
+<body>
+  <div class="wrap" onclick="saveLastPageIndex()">
+    <header class="wrap__header">
+      <div class="wrap__header__face">
+        <div class="wrap__header_logo">
+          <strong><a href="./"><img src="./pic/logo.png" alt="Bike Here"></a></strong>
+        </div>
+        <h1 class="shop">shop Bike Here</h1>
+      </div>
+      <div class="regName">
+        <p id="nameUser"></p>
+      </div>
+    </header>
+    <nav class="wrap__nav">
+      <ul class="navbar">
+        <li><a href="./about.html">we are on the map</a></li>
+        <li><a href="./about.html">our adress</a></li>
+        <li><a href="./about.html">about shop</a></li>
+        <li><a href="./about.html">tel</a></li>
+        <li><a href="./about.html">massage</a></li>
+        <li><a href="#popup" id="buttonHi">for register</a></li>
+        <li><a href="./order.html">order registration</a></li>
+        <li><a href="./gallery.html">gallery bike</a></li>
+        <li><a href="./customer.html">customer</a></li>
+        <li><a href="./weather.html">weather</a></li>
+      </ul>
+    </nav>
+    <main class="mainWrap">
+      <div class="wrapper">
+        <a href="https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-3-lowstep/p/30980/?colorCode=teal" class="mainItem">
+          <div class="mainItem__off">
+            <p>7%<br>off</p>
+          </div>
+          <div class="mainItemImg">
+            <img src="./pic/Verve+3Lowstep__main.png" alt="Verve+ 3 Lowstep">
+          </div>
+          <div class="item__price">
+            <p class="price"><span class="new_price">$ 3021.99</span> <span class="old_price">$ 3,249.99</span></p>
+            <p class="shop">Bike Here</p>
+          </div>
+          <div class="mainAbout">
+            <p>Verve+ 3 Lowstep is an electric hybrid bike that gives your daily cruises, commutes, and workouts a boost. The Bosch pedal-assist system is powerful and reliable, and the battery is fully encased in the frame for great looks and better balance.
+              Plus, you don't need any tools to remove it! This e-bike comes equipped with parts that put your comfort and safety first, like a road-smoothing suspension seatpost, wide, stable tires, and front and rear lights. </p>
+          </div>
+          <div class="footerItem">
+            <ul>
+              <li>Free shipping</li>
+              <li>New</li>
+              <li><time datetime="00:02:29">00:02:29</time></li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/electric-hybrid-bikes/allant/allant-9-9s/p/30258/?colorCode=black_red" class="subItem">
+          <div class="subItem__off">
+            <p>6%<br>off</p>
+          </div>
+          <div class="subItemImg">
+            <img src="./pic/Allant+9.9S.png" alt="Allant+ 9.9S">
+          </div>
+          <div class="subAbout">
+            <p>Allant+ 9.9S is the ultimate e-bike, one that`s more than worthy of replacing your car. The super powerful Bosch Performance Speed motor that assists up to 28 mph.</p>
+          </div>
+          <div class="item__price">
+            <p class="price"><span class="new_price">$ 5921.99</span> <span class="old_price">$ 6,299.99</span></p>
+            <p class="shop">Bike Here</p>
+          </div>
+          <div class="footerItem">
+            <ul>
+              <li>Free shipping</li>
+              <li>New</li>
+              <li><time datetime="00:02:29">00:02:29</time></li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/electric-mountain-bikes/powerfly-equipped/powerfly-fs-9-equipped/p/32991/?colorCode=grey_black" class="subItem">
+          <div class="subItem__off">
+            <p>5%<br>off</p>
+          </div>
+          <div class="subItemImg">
+            <img src="./pic/PowerflyFS9Equipped.png" alt="Powerfly FS 9">
+          </div>
+          <div class="subAbout">
+            <p>Powerfly FS 9 EQ is a full suspension electric mountain bike that’s built for singletrack sessions and rugged commutes. </p>
+          </div>
+          <div class="item__price">
+            <p class="price"><span class="new_price">$ 5699.99</span> <span class="old_price">$ 5,999.99</span></p>
+            <p class="shop">Bike Here</p>
+          </div>
+          <div class="footerItem">
+            <ul>
+              <li>Free shipping</li>
+              <li>New</li>
+              <li><time datetime="00:02:29">00:02:29</time></li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://www.trekbikes.com/us/en_US/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-2/p/28299/?colorCode=grey" class="subItem">
+          <div class="subItem__off">
+            <p>4%<br>off</p>
+          </div>
+          <div class="subItemImg">
+            <img src="./pic/Verve+2.png" alt="Verve+ 2">
+          </div>
+          <div class="subAbout">
+            <p>Verve+ 2 is an electric hybrid bike that will help you get out and ride more. Your daily cruises, commutes, and workouts will all get a boost from the reliable Bosch pedal-assist system.</p>
+          </div>
+          <div class="item__price">
+            <p class="price"><span class="new_price">$ 2639.99</span> <span class="old_price">$ 2,749.99</span></p>
+            <p class="shop">Bike Here</p>
+          </div>
+          <div class="footerItem">
+            <ul>
+              <li>Free shipping</li>
+              <li>New</li>
+              <li><time datetime="00:02:29">00:02:29</time></li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://www.trekbikes.com/us/en_US/bikes/mountain-bikes/electric-mountain-bikes/rail/rail-9-9-xtr/p/32977/?colorCode=greydark_orangevisibility" class="subItem">
+          <div class="subItem__off">
+            <p>3%<br>off</p>
+          </div>
+          <div class="subItemImg">
+            <img src="./pic/Rail9.9XTR.png" alt="Rail 9.9 XTR">
+          </div>
+          <div class="subAbout">
+            <p>Rail 9.9 is a long-travel electric mountain bike built for ultimate trail performance. The light OCLV Mountain Carbon frame features an awesome RockShox suspension setup, a full Shimano XTR drivetrain, and the best e-MTB drive system on the
+              market. </p>
+          </div>
+          <div class="item__price">
+            <p class="price"><span class="new_price">$ 11639.99</span> <span class="old_price">$ 11,999.99</span></p>
+            <p class="shop">Bike Here</p>
+          </div>
+          <div class="footerItem">
+            <ul>
+              <li>Free shipping</li>
+              <li>New</li>
+              <li><time datetime="00:02:29">00:02:29</time></li>
+            </ul>
+          </div>
+        </a>
+      </div>
+      <div id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+          <div class="popup__content">
+            <a href="#" class="popup__close" id="idClose">X</a>
+            <div class="authorization">
+              <h3 id="enter">Please log in or register</h3>
+              <form id="form" class="authorizationForm" action="#">
+                <div class="authorizationForm-control">
+                  <label for="authorizationEmail">Email</label>
+                  <input type="email" id="authorizationEmail" name="email" value="" placeholder="Enter Email" required minlength="8">
+                </div>
+                <div class="authorizationForm-control">
+                  <label for="authorizationPassword">Password</label>
+                  <input type="password" id="authorizationPassword" class="password" name="password" value="" placeholder="Enter Password" required>
+                  <button id="toggle" onclick="if (password.type == 'text') password.type = 'password'; else password.type = 'text';"></button>
+                </div>
+                <button type="submit" id="authorizationButton">Submit</button>
+              </form>
+              <form action="#" class="facebookButton">
+                <button type="submit" id="facebookButton" onclick="logIn()">Log in with facebook</button>
+              </form>
+              <form action="./reg.html" id="button__forReg">
+                <button class="button__forReg">For register with us</button>
+              </form>
+              <form action="#" class="logout">
+                <button id="logout" onclick="logOut()">logout</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="wrap__aside">search form and inline calendar</aside>
+    <footer class="wrap__footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small><span class="shop">shop Bike Here</span> 2021
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/facebook.js"></script>
+  <script defer src="./js/main.js"></script>
+</body>
+
+</html>

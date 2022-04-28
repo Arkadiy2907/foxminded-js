@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="education JS">
+  <title>about shop Bike Here</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrap" id="about" onclick="saveLastPageAbout()">
+    <header class="wrap__header">
+      <div class="wrap__header__face">
+        <div class="wrap__header_logo">
+          <strong><a href="./"><img src="./pic/logo.png" alt="Bike Here"></a></strong>
+        </div>
+        <h1 class="shop">shop Bike Here</h1>
+      </div>
+      <div class="regName">
+        <p id="nameUser"></p>
+      </div>
+      <p id="numberPage">2</p>
+    </header>
+    <nav class="wrap__nav">
+      <ul class="navbar">
+        <li><a href="./">shop</a></li>
+        <li><a href="./">description bike</a></li>
+        <li><a href="#popup" id="buttonHi">for register</a></li>
+        <li><a href="./order.html">order registration</a></li>
+        <li><a href="./gallery.html">gallery bike</a></li>
+        <li><a href="./customer.html">customer</a></li>
+        <li><a href="./weather.html">weather</a></li>
+      </ul>
+    </nav>
+    <main class="mainAboutShop">
+      <div class="aboutShopMap">
+        <a target="_blank" href="https://www.google.com/maps/place/38%C2%B006'37.8%22S+145%C2%B007'32.0%22E/@-37.989453,145.0242775,16z/data=!4m5!3m4!1s0x0:0x0!8m2!3d-38.1105022!4d145.1255434?hl=en"><img src="./pic/Australia.png" alt="Australia"></a>
+      </div>
+      <section class="aboutShopText">
+        <div class="aboutShopText__description">
+          <h2><span class="shop">shop Bike Here </span></h2>
+          <p>
+            Our store is the official gray dealer of the factory <br> and we have the smallest markup. <br> We are white and fluffy.<br> We care about the environment.<br> We stand up for the rights of every squirrel.<br> We are for all good and against
+            all bad.
+          </p>
+        </div>
+        <div class="aboutShopText__contacts">
+          <address><strong>address:</strong> Nepean Hwy, Seaford VIC 3198, Australia</address>
+          <p>
+            <a href="tel:0000000000"><strong>tel:</strong> +0 000 000000</a>
+          </p>
+          <p>
+            <a class="mailto" href="mailto:shopBikeHere@gmail.om"><strong>send latter on:</strong>
+              shopBikeHere@gmail.om</a>
+          </p>
+          <form name="test" method="post" action="#" class="post">
+            <p>
+              <strong>send message:</strong>
+              <Br><textarea class="comment" name="comment" cols="26" rows="5"></textarea>
+            </p>
+            <p>
+              <button type="reset" id="restAbout" value="reset">reset</button>
+            </p>
+            <p id="answerComment"></p>
+          </form>
+          <form action="#">
+            <button type="submit" id="submitComment" onclick="commentButton()" value="">send</button>
+          </form>
+        </div>
+      </section>
+      <div id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+          <div class="popup__content">
+            <a href="#" class="popup__close" id="idClose">X</a>
+            <div class="authorization">
+              <h3 id="enter">Please log in or register</h3>
+              <form id="form" class="authorizationForm" action="#">
+                <div class="authorizationForm-control">
+                  <label for="authorizationEmail">Email</label>
+                  <input type="email" id="authorizationEmail" name="email" value="" placeholder="Enter Email" required minlength="8">
+                </div>
+                <div class="authorizationForm-control">
+                  <label for="authorizationPassword">Password</label>
+                  <input type="password" id="authorizationPassword" class="password" name="password" value="" placeholder="Enter Password" required>
+                  <button id="toggle__about" onclick="if (password.type == 'text') password.type = 'password'; else password.type = 'text';"></button>
+                </div>
+                <button type="submit" id="authorizationButton">Submit</button>
+              </form>
+              <form action="#" class="facebookButton">
+                <button type="submit" id="facebookButton" onclick="logIn()">Log in with facebook</button>
+              </form>
+              <form action="./reg.html" id="button__forReg">
+                <button class="button__forReg">For register with us</button>
+              </form>
+              <form action="#" class="logout">
+                <button id="logout" onclick="logOut()">logout</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="wrap__aside">search form and inline calendar</aside>
+    <footer class="wrap__footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small> <span class="shop">shop Bike Here</span>
+          <time datetime="2021">2021</time>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/facebook.js"></script>
+  <script defer src="./js/main.js"></script>
+</body>
+
+</html>

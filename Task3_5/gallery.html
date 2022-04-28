@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="education JS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>carousel</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrap" id="wrap">
+    <header class="wrap__header">
+      <div class="wrap__header__face">
+        <div class="wrap__header_logo">
+          <strong><a href="./"><img src="./pic/logo.png" alt="Bike Here"></a></strong>
+        </div>
+        <h1 class="shop">shop Bike Here</h1>
+      </div>
+      <div class="regName">
+        <p id="nameUser"></p>
+      </div>
+    </header>
+    <nav class="wrap__nav">
+      <ul class="navbar">
+        <li><a href="./">shop</a></li>
+        <li><a href="./">description bike</a></li>
+        <li><a href="./about.html">we are on the map</a></li>
+        <li><a href="./about.html">our adress</a></li>
+        <li><a href="./about.html">about shop</a></li>
+        <li><a href="./about.html">tel</a></li>
+        <li><a href="./about.html">massage</a></li>
+        <li><a href="./order.html">order registration</a></li>
+        <li><a href="./weather.html">weather</a></li>
+      </ul>
+    </nav>
+    <main class="mainCarousel">
+
+      <div class="carousel">
+        <div class="gallery">
+          <img src="./pic/Verve2big.png" alt="Verve2">
+          <img src="./pic/Verve3big.png" alt="Verve3">
+          <img src="./pic/Railbig.png" alt="Rail">
+          <img src="./pic/Powerflybig.png" alt="Powerfly">
+          <img src="./pic/Allant+big.png" alt="Allant">
+        </div>
+        <button class="arrow prev">◄</button>
+        <button class="arrow next">►</button>
+      </div>
+
+
+      <div class="modalWindow">
+        <div class="modalWindow__content"></div>
+      </div>
+    </main>
+    <aside class="wrap__aside">search form and inline calendar</aside>
+    <footer class="wrap__footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small> <span class="shop">shop Bike Here</span>
+          <time datetime="2021">2021</time>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/gallery.js"></script>
+</body>
+
+</html>

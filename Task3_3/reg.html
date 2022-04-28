@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="education JS">
+  <title>reg shop Bike Here</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="wrap__header">
+      <div class="wrap__header__face">
+        <div class="wrap__header_logo">
+          <strong><a href="./"><img src="./pic/logo.png" alt="Bike Here"></a></strong>
+        </div>
+        <h1 class="shop">shop Bike Here</h1>
+      </div>
+      <div class="regName">
+        <p id="nameUser"></p>
+      </div>
+    </header>
+    <nav class="wrap__nav">
+      <ul class="navbar">
+        <li><a href="./">shop</a></li>
+        <li><a href="./">description bike</a></li>
+        <li><a href="./about.html">we are on the map</a></li>
+        <li><a href="./about.html">our adress</a></li>
+        <li><a href="./about.html">about shop</a></li>
+        <li><a href="./about.html">tel</a></li>
+        <li><a href="./about.html">massage</a></li>
+        <li><a href="./order.html">order registration</a></li>
+        <li><a href="./gallery.html">gallery bike</a></li>
+      </ul>
+    </nav>
+    <main class="mainReg">
+      <div class="newReg">
+        <form id="form" class="form" name="reg" action="#">
+          <h3>Register with us</h3>
+          <div class="form-control">
+            <label for="name">Username</label>
+            <input type="text" id="name" class="name" value="" name="name" placeholder="Enter Username">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email <span class="repeatEmail" id="repeatEmail"></span> </label>
+            <input type="text" id="email" class="email" name="email" value="" placeholder="Enter Email">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="password" name="password" value="" placeholder="Enter Password">
+            <button type="button" id="eye"></button>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password2">Password2</label>
+            <input type="password" id="password2" name="password2" class="password2" value=""
+              placeholder="Enter Password Again">
+            <button type="button" id="eye2"></button>
+            <small>Error message</small>
+          </div>
+          <button type="submit" id="RegButton">Submit</button>
+        </form>
+        <div>
+          <a href="./" id="idCloseReg"></a>
+        </div>
+      </div>
+    </main>
+    <aside class="wrap__aside">search form and inline calendar</aside>
+    <footer class="wrap__footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small> <span class="shop">shop Bike Here</span>
+          <time datetime="2021">2021</time>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/reg.js"></script>
+</body>
+</html>

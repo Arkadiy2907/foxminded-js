@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task3_7</title>
+  <meta name="description" content="education JS">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      <h1>Sign Up</h1>
+      <div class="toogleHeader">
+        <h3 class="toogleHeader__minor">Your info</h3>
+        <h3 class="toogleHeader__basic">Your preferences</h3>
+      </div>              
+      <form id="form2" class="form2" name="reg2" action="#">
+        <section class="form__inputInfo">
+          <h4>Food allergies</h4>
+          <div class="form-control">
+            <p class="forComment">
+              <textarea class="comment" id="comment" name="comment"></textarea>
+            </p>
+          </div>
+        </section>
+        <section class="form__inputInfo form__inputInfo__radio1">
+          <h4>Frequency</h4>
+          <div class="form-control">
+            <div class="form-control__radio">
+              <input type="radio" id="weekly" class="form-control__radio__input" name="frequency" value="Weekly" checked>
+              <label for="weekly">Weekly</label>
+            </div>
+            <div class="form-control__radio">
+              <input type="radio" id="biweekly" class="form-control__radio__input" name="frequency" value="Biweekly">
+              <label for="biweekly">Biweekly</label>
+            </div>
+            <div class="form-control__radio">
+              <input type="radio" id="monthly" class="form-control__radio__input" name="frequency" value="Monthly">
+              <label for="monthly">Monthly</label>
+            </div>
+          </div>
+        </section>
+        <section class="form__inputInfo form__inputInfo__radio2">
+          <h4>Package size</h4>
+          <div class="form-control">
+            <div class="form-control__radio">
+              <input type="radio" id="tasteTest" class="form-control__radio__input" name="packageSize"
+                value="Taste test" checked>
+              <label for="tasteTest">Taste test</label>
+            </div>
+            <div class="form-control__radio">
+              <input type="radio" id="healthyHighlight" class="form-control__radio__input" name="packageSize"
+                value="Healthy Highlight">
+              <label for="healthyHighlight">Healthy Highlight</label>
+            </div>
+            <div class="form-control__radio">
+              <input type="radio" id="fullPlate" class="form-control__radio__input" name="packageSize"
+                value="Full plate">
+              <label for="fullPlate">Full plate</label>
+            </div>
+          </div>
+        </section>
+        <button type="button" class="signUp"><strong>Sign Up</strong></button>
+      </form>
+    </main>
+  </div>
+  <script defer src="./js/forOrder2.js"></script>
+</body>
+
+</html>

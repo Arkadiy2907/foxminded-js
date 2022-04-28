@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+.wrapper {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("../pic/Karpaty.jpg");
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: rgb(223, 223, 223, .5);
+    border-radius: 5px;    
+}
+
+.main h1 {
+    padding: 10px;      
+}
+
+.toogleHeader {
+    display: flex;
+    padding: 10px ;
+}
+
+.toogleHeader__basic {
+    background-color: rgb(106, 106, 106);
+    color: rgb(201, 201, 5);
+    border: 2px solid black;
+    padding: 5px 10px;    
+}
+
+.toogleHeader__minor {
+    background-color: rgb(167, 167, 167);
+    color: rgb(223, 221, 221);
+    padding: 5px 10px;
+}
+
+.form, .form2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5px;    
+}
+
+.form__inputInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-right: 60px;
+}
+
+#city, #zip {
+    width: 140px;
+    margin-right: 120px;
+}
+
+#state {
+    width: 40px;
+    margin-right: 220px;
+}
+
+.form__inputInfo h3 {
+    margin: 1% 0;
+}
+
+.form__inputInfo__tel {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.buttonNext, .signUp {
+    padding: 3px 20px;
+    color: yellow;
+    border: 3px solid black;
+    background: linear-gradient(to top, rgb(165, 165, 165) 0, rgb(223, 223, 223) 100%);
+    border-radius: 20px;
+    font-size: 1.2em;
+    margin: 10px 30px;
+}
+
+.buttonNext:hover, .signUp:hover {
+    cursor: pointer;
+}
+
+.form2 .form__inputInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.form2 .form__inputInfo h4 {
+    margin: 5px 0;
+}
+
+.forComment {
+    margin-left: 85px;
+}
+
+.comment {
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+.form__inputInfo__radio1 {
+    margin-right: 130px;
+}
+
+.form__inputInfo__radio2 {
+    margin-right: 70px;
+}
+
+.form-control__radio {
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.form-control__radio__input {
+    margin-right: 5px;
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: red;
+}
