@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="education JS">
+  <title>order registration shop Bike Here</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="wrap__header">
+      <div class="wrap__header__face">
+        <div class="wrap__header_logo">
+          <strong><a href="./"><img src="./pic/logo.png" alt="Bike Here"></a></strong>
+        </div>
+        <h1 class="shop">shop Bike Here</h1>
+      </div>
+      <div class="regName">
+        <p id="nameUser"></p>
+      </div>
+    </header>
+    <nav class="wrap__nav">
+      <ul class="navbar">
+        <li><a href="./">shop</a></li>
+        <li><a href="./">description bike</a></li>
+        <li><a href="./about.html">we are on the map</a></li>
+        <li><a href="./about.html">our adress</a></li>
+        <li><a href="./about.html">about shop</a></li>
+        <li><a href="./about.html">tel</a></li>
+        <li><a href="./about.html">massage</a></li>
+        <li><a href="./gallery.html">gallery bike</a></li>
+      </ul>
+    </nav>answerInGetAccount
+    <main class="mainOrderRegistration">
+      <form id="formOrder" class="orderRegistration__form" name="formOrder" action="#">
+        <section class="createAccount">
+          <h3>create an account?</h3>
+          <div class="form-control">
+            <p>if you no want create an account please<br>mark </p>
+            <label><input type="checkbox" name="needAccount" id="needAccount" value=""> yes</label>
+          </div>
+          <div class="form-control">
+            <label for="userName">Username</label>
+            <input type="text" id="userName" class="userName" value="" name="userName" placeholder="Enter Username">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="password" name="password" value="" placeholder="Enter Password">
+            <small>Error message</small>
+            <div class="forButtonOrder">
+              <button type="button" id="eyeOrder"><img src="./pic/eyeClose30.png" alt="eye" id="eyeOrderImg"></button>
+            </div>
+          </div>
+          <div class="form-control">
+            <label for="password2">Password2</label>
+            <input type="password" id="password2" name="password2" class="password2" value=""
+              placeholder="Enter Password Again">
+            <small>Error message</small>
+            <div class="forButtonOrder2">
+              <button type="button" id="eyeOrder2"><img src="./pic/eyeClose30.png" alt="eye" id="eyeOrderImg2"></button>
+            </div>
+          </div>
+        </section>
+        <section class="chooseBike">
+          <div class="form-control">
+            <h3>choose a bikes</h3>
+            <label for="chooseBike"></label>
+            <select id="chooseBike" name="chooseBike">
+              <option value="Verve+ 3">Verve+ 3</option>
+              <option value="Allant +9.9S">Allant +9.9S</option>
+              <option value="Powerfly FS9">Powerfly FS9</option>
+              <option value="Verve +2">Verve +2</option>
+              <option value="Rail 9.9XTR">Rail 9.9XTR</option>
+            </select>
+            <p>for comment:</p>
+            <p class="forComment">
+              <textarea class="chooseBikeComment" id="chooseBikeComment" name="chooseBikeComment" cols="30"
+                rows="5"></textarea>
+            </p>
+            <p class="forCommentButtonRest">
+              <button type="reset" id="restAbout" value="reset">reset</button>
+            </p>
+          </div>
+        </section>
+        <section class="billingAddress" id="billingAddress">
+          <h3>please enter your billing information</h3>
+          <div class="form-control">
+            <label for="billingAddressName">User name (with a capital letter)</label>
+            <input type="text" id="billingAddressName" class="billingAddressName" name="billingAddressName" value=""
+              placeholder="Enter name" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="billingAddressSurname">User surname (with a capital letter)</label>
+            <input type="text" id="billingAddressSurname" class="billingAddressSurname" value=""
+              name="billingAddressSurname" placeholder="Enter surname" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="billingAddressStreet">Street address</label>
+            <input type="text" id="billingAddressStreet" class="billingAddressStreet" name="billingAddressStreet"
+              value="" placeholder="Enter street address" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="billingAddressField">Choose State or Region:</label>
+            <select name="billingAddressField" id="billingAddressField">
+              <option value="State">State</option>
+              <option value="Region">Region</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="billingAddressStateRegion">name State or Region:</label>
+            <input type="text" id="billingAddressStateRegion" class="billingAddressStateRegion"
+              name="billingAddressStateRegion" value="" placeholder="Enter name State or Region" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="billingAddressZipCode">zip code</label>
+            <input type="text" id="billingAddressZipCode" class="billingAddressZipCode" name="billingAddressZipCode"
+              value="" placeholder="Enter zip code">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="billingAddressTel">your phone number</label>
+            <input type="text" id="billingAddressTel" name="billingAddressTel" class="billingAddressTel" value=""
+              placeholder="Enter your phone number">
+            <small>Error message</small>
+          </div>
+        </section>
+        <section class="deliveryAddress">
+          <h3>please enter your delivery information</h3>
+          <div class="form-control">
+            <p>if delivery address and billing address <br> is match please mark</p>
+            <label><input type="checkbox" name="addressMatch" id="addressMatch" value=""> yes</label>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressName">User name (with a capital letter)</label>
+            <input type="text" id="deliveryAddressName" class="deliveryAddressName" value="" name="deliveryAddressName"
+              placeholder="Enter name" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressSurname">User surname (with a capital letter)</label>
+            <input type="text" id="deliveryAddressSurname" class="deliveryAddressSurname" value=""
+              name="deliveryAddressSurname" placeholder="Enter surname" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressStreet">Street address</label>
+            <input type="text" id="deliveryAddressStreet" class="deliveryAddressStreet" name="deliveryAddressStreet"
+              value="" placeholder="Enter street address" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressField">Choose State or Region:</label>
+            <select name="deliveryAddressField" id="deliveryAddressField">
+              <option value="State">State</option>
+              <option value="Region">Region</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressStateRegion">name State or Region:</label>
+            <input type="text" id="deliveryAddressStateRegion" class="deliveryAddressStateRegion"
+              name="deliveryAddressStateRegion" value="" placeholder="Enter name State or Region" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressZipCode">zip code</label>
+            <input type="text" id="deliveryAddressZipCode" class="deliveryAddressZipCode" name="deliveryAddressZipCode"
+              value="" placeholder="Enter zip code">
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="deliveryAddressTel">your phone number</label>
+            <input type="text" id="deliveryAddressTel" name="deliveryAddressTel" class="deliveryAddressTel" value=""
+              placeholder="Enter your phone number">
+            <small>Error message</small>
+          </div>
+        </section>
+        <section class="deliveryDate">
+          <h3>choose date delivery:</h3>
+          <p>(delivery is carried out not earlier than the <br> next day)</p>
+          <div class="form-control">
+            <label for="dateDelivery"></label>
+            <input type="date" id="dateDelivery" class="dateDelivery" name="dateDelivery" required>
+            <small>Error message</small>
+          </div>
+        </section>
+        <section class="payment">
+          <h3>information about credit card</h3>
+          <div class="form-control">
+            <p>choose type of Credit Card:</p>
+            <label for="typeCard"></label>
+            <select id="typeCard" name="typeCard">
+              <option value="Visa">Visa</option>
+              <option value="MasterCard">MasterCard</option>
+              <option value="American Express">American Express</option>
+              <option value="Diners Club">Diners Club</option>
+              <option value="Discover">Discover</option>
+              <option value="JCB">JCB</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="cardNumber">card number</label>
+            <input type="text" id="cardNumber" class="cardNumber" name="cardNumber" value="" placeholder="Card number"
+              required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="expiration">Expiration</label>
+            <input type="month" id="expiration" class="expiration" name="expiration" value="" required>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" class="cvv" value="" placeholder="Enter CVV" required>
+            <small>Error message</small>            
+          </div>
+          <img src="./pic/cvv400.png" alt="cvv">
+        </section>
+        <section class="orderRegistrationButton">
+          <div>
+            <button type="submit" id="submitButton">Submit</button>
+          </div>
+        </section>
+      </form>
+    </main>
+    <aside class="wrap__aside">search form and inline calendar</aside>
+    <footer class="wrap__footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small> <span class="shop">shop Bike Here</span>
+          <time datetime="2021">2021</time>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/order.js"></script>
+</body>
+
+</html>

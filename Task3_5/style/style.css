@@ -1,0 +1,928 @@
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+     :root {
+      --red: #ff6666;
+      --black: rgb(8, 8, 8);
+      --beige: #E6E6E6;
+      --yellow: rgb(250, 250, 0);
+      --green: rgb(3, 129, 3);
+      --orange: rgb(250, 164, 4);
+      --lightGreen: #04ebdf;
+      --darkGreen: #1c4e3e;
+      --lightToDarkGradient: linear-gradient(to left, var(--darkGreen) 0, var(--lightGreen) 100%);
+    }
+    
+    a {
+      color: var(--black);
+      text-decoration: none;
+    }
+    
+    .wrap {
+      font-family: sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-areas: "header header header" "nav mainWrap aside" "footer footer footer";
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+    }
+    
+    .wrap__header {
+      grid-area: header;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px;
+      background: var(--lightToDarkGradient);
+      font-size: 0;
+      justify-content: space-between;
+    }
+    
+    .wrap__header__face {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 15px;
+      font-size: 0;
+    }
+    
+    .regName {
+      padding: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+    
+    .wrap__header_logo:hover {
+      box-shadow: 0 0 46px 56px var(--yellow);
+    }
+    
+    .wrap__header .shop {
+      font-size: 52px;
+      padding: 15px;
+    }
+    
+    .mainWrap {
+      grid-area: mainWrap;
+      display: grid;
+      justify-content: center;
+    }
+    
+    .wrapper {
+      background-color: var(--darkGreen);
+      padding: 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(386px, 1fr));
+      row-gap: 25px;
+      column-gap: 32px;
+      max-width: 100%;
+    }
+    
+    .mainItem {
+      border: 1px solid var(--red);
+      padding: 8px;
+      grid-row: span 2;
+      display: grid;
+      text-decoration: none;
+      color: var(--black);
+      transition: .5s ease-in;
+      grid-template-areas: "off picMain" "prise prise" "mainAbout mainAbout" "footer footer";
+      align-content: space-between;
+    }
+    
+    .mainItem:hover {
+      transform: scale(1.02);
+    }
+    
+    .subItem {
+      border: 1px solid var(--orange);
+      padding: 8px;
+      text-decoration: none;
+      color: var(--black);
+      transition: .5s ease-in;
+      display: grid;
+      grid-template: repeat(4, auto) / repeat(2, auto);
+      grid-template-areas: "off picSub" "subAbout picSub" "prise prise" "footer footer";
+      align-content: space-between;
+    }
+    
+    .subItem:hover {
+      transform: scale(1.04);
+    }
+    
+    .mainItem__off,
+    .subItem__off {
+      grid-area: off;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font: bold 19px sans-serif;
+      color: white;
+      letter-spacing: 1.5px;
+    }
+    
+    .mainItem__off {
+      background: var(--red);
+    }
+    
+    .subItem__off {
+      background: var(--orange);
+    }
+    
+    .mainItemImg {
+      grid-area: picMain;
+      padding-top: 8px;
+    }
+    
+    .subItemImg {
+      grid-area: picSub;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    .mainAbout {
+      grid-area: mainAbout;
+      padding: 8px 5% 8px 0;
+      font-size: 21px;
+    }
+    
+    .subAbout {
+      grid-area: subAbout;
+      padding: 8px 5px 8px 0;
+      font-size: 18px;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .item__price {
+      grid-area: prise;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+    }
+    
+    .mainItem .item__price {
+      border-bottom: 2px dotted var(--beige);
+    }
+    
+    .price {
+      min-width: 125px;
+      margin-right: 8px;
+    }
+    
+    .new_price {
+      font-size: 30px;
+      color: var(--red);
+    }
+    
+    .old_price {
+      position: relative;
+    }
+    
+    .old_price:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      right: 0;
+      border-top: 1px solid var(--black);
+      transform: rotate(11deg);
+    }
+    
+    .shop {
+      padding: 0 5px;
+      font-weight: bold;
+      background: linear-gradient(to right, var(--orange) 0, rgb(0, 0, 102) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+    
+    .footerItem {
+      grid-area: footer;
+      border-top: 2px dotted var(--beige);
+    }
+    
+    .footerItem ul {
+      font-size: 0;
+      padding: 8px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+    }
+    
+    .footerItem li {
+      list-style-type: none;
+      font-size: 16px;
+      display: inline-block;
+      padding: 0 5px;
+      flex: 1 1 auto;
+      border-right: 2px solid var(--beige);
+      text-align: center;
+    }
+    
+    .footerItem li:last-child {
+      border-right: none
+    }
+    
+    @media (max-width: 1224px) {
+      .wrapper {
+        max-width: 1200px;
+      }
+    }
+    
+    @media (max-width: 806px) {
+      .wrapper {
+        max-width: 803px;
+      }
+    }
+    
+    @media (max-width: 415px) {
+      .wrapper {
+        min-width: 250px;
+        padding: 0;
+      }
+      .mainItem:hover {
+        transform: none;
+      }
+      .subItem:hover {
+        transform: none;
+      }
+    }
+    
+    .wrap__nav {
+      grid-area: nav;
+      background: var(--lightToDarkGradient);
+      padding: 10px;
+    }
+    
+    .navbar {
+      padding: 0;
+      min-width: 100px;
+    }
+    
+    .navbar li {
+      border-left: 10px solid var(--green);
+      border-bottom: 1px solid var(--green);
+      list-style-type: none;
+      position: relative;
+    }
+    
+    .navbar a,
+    .navbar span {
+      background-color: var(--lightToDarkGradient);
+      padding: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      border-left: 5px solid var(--yellow);
+      display: block;
+      cursor: pointer;
+    }
+    
+    .navbar a:hover,
+    .navbar span:hover {
+      background-color: var(--yellow);
+    }
+    
+    .navbar ul {
+      display: none;
+      position: absolute;
+      top: 0px;
+      width: max-content;
+      left: 140px;
+      padding-left: 0;
+    }
+    
+    ul.navbar__active {
+      display: block;
+    }
+    
+    .wrap__aside {
+      grid-area: aside;
+      background: linear-gradient(to right, var(--darkGreen) 0, var(--lightGreen) 100%);
+      padding: 10px;
+      min-width: 100px;
+    }
+    
+    .wrap__footer {
+      grid-area: footer;
+      background: var(--lightToDarkGradient);
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      color: white;
+      padding: 15px;
+    }
+    
+    .datetime {
+      padding: 5px;
+    }
+    
+    @media all and (max-width: 1160px) {
+      .wrap {
+        display: grid;
+        min-width: 386px;
+        grid-template-areas: "header" "nav" "mainWrap" "aside" "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr auto auto;
+      }
+      .navbar ul {
+        left: -10px;
+        top: 30px;
+        width: min-content
+      }
+      .navbar li {
+        display: inline-block;
+        border-top: 1px solid var(--green);
+      }
+      ul.navbar__active {
+        background-color: #1c4e3e;
+      }
+      .wrap__footer {
+        justify-content: center;
+      }
+      .aboutShopMap:hover {
+        transform: none;
+      }
+      .wrap__aside {
+        background: var(--lightToDarkGradient);
+      }
+    }
+    
+    .mainAboutShop {
+      grid-area: mainWrap;
+      background: var(--darkGreen);
+      font-size: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    
+    .aboutShopText {
+      display: flex;
+      flex-direction: column;
+      line-height: 25px;
+    }
+    
+    .aboutShopMap,
+    .mailto {
+      text-decoration: none;
+      color: var(--black);
+    }
+    
+    .aboutShopText__contacts p {
+      margin-bottom: 10px;
+    }
+    
+    .aboutShopMap p {
+      margin-bottom: 5px;
+    }
+    
+    .aboutShopMap {
+      transition: .5s ease-in;
+    }
+    
+    .aboutShopMap:hover {
+      transform: scale(1.02);
+    }
+    
+    .aboutShopMap,
+    .aboutShopText {
+      padding: 20px;
+    }
+    
+    .aboutShopText__description {
+      margin-bottom: 35px;
+    }
+    
+    .aboutShopText__description h2 {
+      margin-bottom: 7px;
+    }
+    
+    address {
+      font-style: normal;
+      margin-bottom: 10px;
+    }
+    
+    button {
+      background: var(--lightToDarkGradient);
+      font-size: 16px;
+      font-weight: bold;
+      padding: 5px 25px;
+      color: var(--black);
+      border: 1px solid var(--black);
+      border-radius: 5px;
+    }
+    
+    .aboutShopText__contacts button {
+      margin-right: 125px;
+      overflow-y: auto;
+    }
+    
+    .aboutShopText__contacts button:last-child {
+      margin-right: 0;
+    }
+    
+    button:hover {
+      cursor: pointer;
+      background: linear-gradient(to right, var(--darkGreen) 0, var(--lightGreen) 100%);
+    }
+    
+    .comment {
+      background: var(--lightGreen);
+      color: var(--black);
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    
+    .post {
+      position: relative;
+    }
+    
+    #restAbout,
+    #submitComment {
+      width: 66%;
+    }
+    
+    #answerComment {
+      position: absolute;
+      top: 38%;
+      left: 5%;
+      font-size: 26px;
+      color: var(--darkGreen);
+    }
+    /* reg============================================================= */
+    
+    .mainReg {
+      grid-area: mainWrap;
+      background: var(--darkGreen);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .newReg,
+    .authorization {
+      background: var(--beige);
+      border-radius: 5px;
+      padding: 5px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+    }
+    
+    .authorization {
+      padding: 25px;
+    }
+    
+    #toggle,
+    #toggle__about {
+      position: absolute;
+      padding: 10px;
+      right: 21%;
+      bottom: 51.5%;
+      width: 10px;
+    }
+    
+    .newReg {
+      position: relative;
+    }
+    
+    #eye,
+    #eye2 {
+      position: absolute;
+      padding: 10px;
+      right: 15%;
+      bottom: 37.5%;
+      width: 10px;
+    }
+    
+    #eye2 {
+      right: 15%;
+      bottom: 19%;
+    }
+    
+    #enter {
+      padding: 18px 30px;
+      width: 100%;
+    }
+    
+    .facebookButton,
+    #button__forReg,
+    .logout {
+      padding: 0 30px;
+    }
+    
+    #facebookButton {
+      padding: 10px 27px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    .button__forReg {
+      padding: 10px 32px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    #logout {
+      padding: 10px 81px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    
+    .form,
+    .authorizationForm {
+      padding: 10px 30px;
+    }
+    
+    .form h3 {
+      padding: 15px;
+    }
+    
+    .form-control,
+    .authorizationForm-control {
+      padding-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form label,
+    .authorizationForm label {
+      color: var(--black);
+      margin-bottom: 5px;
+    }
+    
+    .form input,
+    .authorizationForm input {
+      border: 2px solid var(--darkGreen);
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 15px;
+    }
+    
+    .form input:focus {
+      border-color: var(--black);
+    }
+    
+    .form input:last-child,
+    .authorizationForm input:last-child {
+      margin-bottom: 15px;
+    }
+    
+    .form-control small,
+    .repeatEmail {
+      font-size: 10px;
+      background: #fff;
+      color: var(--red);
+      visibility: hidden;
+    }
+    
+    .form button,
+    .authorizationForm button {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .form-control.error small,
+    #repeatEmail {
+      visibility: visible;
+    }
+    
+    .form-control.error input,
+    .authorizationForm-control input:invalid {
+      border-color: var(--red);
+    }
+    
+    .form-control.success input,
+    .authorizationForm-control input:valid {
+      border-color: var(--green);
+    }
+    
+    .inShop {
+      width: 50%;
+      padding: 5px;
+      margin: 5px 40px;
+    }
+    
+    .popup {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.6s ease 0s;
+    }
+    
+    .popup:target {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .popup:target .popup__content {
+      transform: perspective(600px) translate(0, 0) rotateX(0);
+      opacity: 1;
+    }
+    
+    .popup__body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    
+    .popup__content {
+      position: relative;
+      transition: all 0.5s ease 0s;
+      opacity: 0;
+      transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    }
+    
+    .popup__close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 20px;
+    }
+    
+    .popup__close:hover {
+      color: var(--lightGreen);
+    }
+    
+    .popup__area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    
+    #idCloseReg {
+      display: none;
+    }
+    /* ===================OrderRegistration======================= */
+    
+    .mainOrderRegistration,
+    .resultForm {
+      grid-area: mainWrap;
+      background: var(--darkGreen);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      color: gainsboro;
+    }
+    
+    .orderRegistration__form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .orderRegistration__form label,
+    .orderRegistration__form h3,
+    #chooseBike {
+      margin-bottom: 7px;
+    }
+    
+    .orderRegistration__form section {
+      padding: 15px;
+      border: 1px solid var(--beige);
+    }
+    
+    .infoOrder {
+      padding: 3px;
+    }
+    
+    .createAccount button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      width: 40px;
+    }
+    
+    .forButtonOrder,
+    .forButtonOrder2 {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .forComment {
+      display: flex;
+      margin-bottom: 5px;
+    }
+    
+    .forCommentButtonRest {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .orderRegistrationButton {
+      height: max-content;
+    }
+    /* =============================Carousel====================================== */
+    
+    .mainCarousel {
+      grid-area: mainWrap;
+      background: var(--darkGreen);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+    }
+    
+    .carousel {
+      max-width: 600px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .gallery {
+      display: flex;
+      transition: all ease 1s;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .arrow {
+      padding: 0;
+      font-size: 30px;
+      color: gold;
+      position: absolute;
+      top: 45%;
+    }
+    
+    .arrow:focus {
+      outline: none;
+    }
+    
+    .arrow:hover {
+      cursor: pointer;
+    }
+    
+    .next {
+      right: 0;
+    }
+    
+    .modalWindow {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--darkGreen);
+      cursor: pointer;
+    }
+    
+    .modalWindow__content {
+      display: flex;
+      flex-direction: column;
+      margin: 50px auto;
+      padding: 5px;
+      cursor: default;
+      max-width: 800px;
+    }
+    /* ===============================Customer */
+    
+    .mainCustomer {
+      grid-area: mainWrap;
+      background: var(--darkGreen);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+    }
+    
+    .formCustomer h1,
+    #restInformationCustomer,
+    #paymentCustomer {
+      margin-bottom: 15px;
+    }
+    /* ===================================Weather */
+    
+    .mainWeather {
+      grid-area: mainWrap;
+      background: var(--darkGreen);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 5px;
+      font-size: 1em;
+    }
+    
+    .currentWeather__header {
+      text-align: center;
+    }
+    
+    .currentWeather__iconAndTemp,
+    .forecastWeatherBodyHourly__left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .currentWeather__temp {
+      font-size: 2em;
+    }
+    
+    .currentWeather__atmosphere,
+    .currentWeather__date {
+      padding: 7px 0;
+    }
+    
+    .currentWeather__coords {
+      color: rgb(194, 107, 0);
+    }
+    
+    .currentWeather_wrap,
+    .forecastWeather_wrap {
+      background-color: var(--beige);
+      margin: 3px;
+    }
+    
+    .currentWeather__Body {
+      margin-left: 35px;
+      padding: 5px;
+    }
+    
+    .currentWeather__tabl {
+      border: 1px solid rgb(170, 170, 170);
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .currentWeather__tabl td {
+      border: 1px solid rgb(170, 170, 170);
+      padding: 7px;
+    }
+    
+    .currentWeather__tabl tr:nth-of-type(odd),
+    .forecastWeatherHeaderDaily {
+      background-color: #ccc;
+    }
+    
+    .forecastWeatherBodyHourly {
+      display: flex;
+      padding: 5px;
+      border-bottom: 1px solid rgb(170, 170, 170);
+    }
+    
+    .forecastWeatherBodyHourly:last-child {
+      border-bottom: none;
+    }
+    
+    .currentWeather__header,
+    .forecastWeather__header {
+      padding: 20px 0;
+    }
+    
+    .forecastWeatherHeaderDaily {
+      padding: 15px 0;
+      border: 1px solid rgb(170, 170, 170);
+      font-weight: bold;
+    }
+    
+    .forecastWeatherBodyHourly__left {
+      margin-right: 70px;
+    }
+    
+    .forecastWeatherBodyHourly__rightTemp {
+      padding: 1px 12px;
+      background-color: rgb(126, 126, 126);
+      border-radius: 10px;
+    }
+    
+    .forecastWeatherBodyHourly__right {
+      margin: auto
+    }
+    
+    .nameSity {
+      padding: 5px;
+    }
+    
+    .nameSity__select {
+      padding: 5px;
+      margin: 5px 5px 5px 0;
+    }

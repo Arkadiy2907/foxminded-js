@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+.header,
+.footer {
+    text-align: center;
+    padding: 2% 0;
+    color: white;
+}
+
+.wrapper {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../pic/Karpaty.jpeg");
+    background-size: cover;
+}
+
+.header {
+    min-height: 5%;
+}
+.header h2 {
+    padding: 5px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(223, 223, 223, .5);
+    border-radius: 5px;
+}
+
+.main__wrap h2 {
+    padding: 5px;
+    text-align: center;
+    margin: 3% 10% 3% 0%
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 5px;
+    margin: 5px 80px 10px 20px;
+}
+
+.form__inputInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.form__checkbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__checkbox__body {
+    display: flex;
+    align-items: center;
+}
+
+.form__checkbox__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__inputInfo h3,
+.checkbox {
+    margin: 1% 0;
+}
+
+.profileData {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid black;
+    background-color: rgba(223, 223, 223, .9);
+    border-radius: 5px;
+    height: min-content;
+}
+
+#RegButton {
+    margin: 4% 20% 2% 0;
+    background-color: rgb(156, 244, 247);
+}
+
+#RegButton:hover {
+    cursor: pointer;
+}
+
+.form__password,
+.form__password2 {
+    position: relative;
+}
+
+#eyeOrder,
+#eyeOrder2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: .5;
+}
+
+.profileData h3 {
+    text-align: center;
+    margin: 2% auto;
+}
+
+.userNameResultat,
+.emailAddressResultat,
+.preferredLodgingsResultat {
+    margin: 2% 0;
+}
+
+.footer {
+    min-height: 10%;
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+    color: rgb(5, 38, 255);
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: red;
+}
+
+@media all and (max-width: 650px) {
+    .main__wrap {
+        background-color: rgb(223, 223, 223, .7);
+    }
+    .main__formAndProfile {
+        justify-content: center;
+    }
+    .form__inputInfo {
+        flex-direction: column;
+    }
+    .form__checkbox {
+        align-items: center;
+    }
+    .form {
+        margin: 0;
+        align-items: center;
+    }
+    .main__wrap h2 {
+        margin: 0;
+    }
+    #eyeOrder,
+    #eyeOrder2 {
+        top: 25px;
+    }
+    .datetime {
+        background-color: rgba(223, 223, 223, .2);
+        font-size: 0.7em;
+    }
+}
+
+@media all and (max-width: 512px) {
+    .header h2 {
+        font-size: 1.2em;
+    }    
+    .main__wrap {
+        background-color: rgb(223, 223, 223, .8);
+    }
+    .main__wrap h2 {        
+        font-size: 1.2em;
+    }    
+    .form h3, .form__checkbox__wrap, .profileData {
+        font-size: .9em;
+    }    
+    #eyeOrder,
+    #eyeOrder2 {
+        top: 20px;        
+    }    
+    .datetime {
+        background-color: rgba(223, 223, 223, .5);
+    }
+}
+
+@media all and (max-width: 324px) {    
+    .profileData {
+        margin: 0;
+    }
+    .header h2 {
+        font-size: .7em;
+    } 
+    .main__wrap h2 {        
+        font-size: .8em;
+    }    
+    .form h3, .form__checkbox__wrap, .profileData {
+        font-size: .7em;
+    }
+    #eyeOrder,
+    #eyeOrder2 {
+        top: 16px;        
+    }    
+    .datetime {
+        background-color: rgb(223, 223, 223);
+    }
+}

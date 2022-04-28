@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="education JS">
+  <title>customer</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrap" id="wrap">
+    <header class="wrap__header">
+      <div class="wrap__header__face">
+        <div class="wrap__header_logo">
+          <strong><a href="./"><img src="./pic/logo.png" alt="Bike Here"></a></strong>
+        </div>
+        <h1 class="shop">shop Bike Here</h1>
+      </div>
+      <div class="regName">
+        <p id="nameUser"></p>
+      </div>
+    </header>
+    <nav class="wrap__nav">
+      <ul class="navbar">
+        <li><a href="./">shop</a></li>
+        <li><a href="./">description bike</a></li>
+        <li><a href="./about.html">we are on the map</a></li>
+        <li><a href="./about.html">our adress</a></li>
+        <li><a href="./about.html">about shop</a></li>
+        <li><a href="./about.html">tel</a></li>
+        <li><a href="./about.html">massage</a></li>
+        <li><a href="./order.html">order registration</a></li>
+      </ul>
+    </nav>
+    <main class="mainCustomer">
+
+      <form id="formCustomer" class="formCustomer" name="formCustomer" action="#">
+
+        <h1>customer information</h1>
+        <div class="form-control">
+          <label for="nameCustomer">name customer</label>
+          <input type="text" id="nameCustomer" class="nameCustomer" value="" name="nameCustomer" placeholder="Enter name">
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="surnameCustomer">surname customer</label>
+          <input type="text" id="surnameCustomer" class="surnameCustomer" value="" name="surnameCustomer" placeholder="Enter surname">
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="firstBuyingCustomer">enter the date first buying <br> after first buying you have a
+            discount 5%</label>
+          <input type="date" id="firstBuyingCustomer" class="firstBuyingCustomer" name="firstBuyingCustomer">
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="nextBuyingCustomer">enter the date if you bought yet</label>
+          <input type="date" id="nextBuyingCustomer" class="nextBuyingCustomer" name="nextBuyingCustomer">
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="paymentCustomer">Choose cach payment:</label>
+          <select name="paymentCustomer" id="paymentCustomer">
+            <option value="creditСard">credit card</option>
+            <option value="cash">cash</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <button type="reset" id="restInformationCustomer" value="reset">reset</button>
+          <button type="submit" id="submitButton">Submit</button>
+        </div>
+
+      </form>
+
+    </main>
+    <aside class="wrap__aside">search form and inline calendar</aside>
+    <footer class="wrap__footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small> <span class="shop">shop Bike Here</span>
+          <time datetime="2021">2021</time>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/customer.js"></script>
+</body>
+
+</html>

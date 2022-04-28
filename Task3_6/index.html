@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Grail on Flex</title>
+  <meta name="description" content="education JS">
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h2>Welcome in Ski National Park in Carpathian Mountains, Czech Republic!</h2>
+    </header>
+    <main class="main">
+      <div class="main__wrap">
+        <h2>Create An Account</h2>
+        <form id="form" class="form" name="reg" action="#">
+          <section class="form__inputInfo">
+            <h3>Username</h3>
+            <div class="form-control">
+              <label for="userName"></label>
+              <input type="text" id="userName" value="" name="userName" placeholder="Enter Username">
+              <small>Error message</small>
+            </div>
+          </section>
+          <section class="form__inputInfo form__password">
+            <h3>Password</h3>
+            <div class="form-control">
+              <label for="password"></label>
+              <input type="password" id="password" name="password" value="" placeholder="Enter Password">
+              <small>Error message</small>
+              <div class="forButtonOrder">
+                <button type="button" id="eyeOrder"><img src="./pic/eyeClose30.png" alt="eye" id="eyeOrderImg"></button>
+              </div>
+            </div>
+          </section>
+          <section class="form__inputInfo form__password2">
+            <h3>Password (confirm)</h3>
+            <div class="form-control">
+              <label for="password2"></label>
+              <input type="password" id="password2" name="password2" value="" placeholder="Password Again">
+              <small>Error message</small>
+              <div class="forButtonOrder2">
+                <button type="button" id="eyeOrder2"><img src="./pic/eyeClose30.png" alt="eye"
+                    id="eyeOrderImg2"></button>
+              </div>
+            </div>
+          </section>
+          <section class="form__inputInfo">
+            <h3>Email Address</h3>
+            <div class="form-control">
+              <label for="email"></label>
+              <input type="text" id="email" name="email" value="" placeholder="Enter Email">
+              <small>Error message</small>
+            </div>
+          </section>
+          <section class="form__inputInfo form__checkbox">
+            <h3>Preferred Lodgings</h3>
+            <div class="form-control form__checkbox__body">
+              <div class="form__checkbox__wrap">
+                <label><input type="checkbox" name="fireCabins" class="checkbox" value="">Fire
+                  Cabins</label>
+                <label><input type="checkbox" name="horseshoeCabins" class="checkbox" value="">Horseshoe Cabins</label>
+                <label><input type="checkbox" name="spruceCabins" class="checkbox" value="">Spruce
+                  Cabins</label>
+                <label><input type="checkbox" name="ursaMajorCabins" class="checkbox" value="">Ursa
+                  Major Cabins</label>
+                <label><input type="checkbox" name="bearMeadowCampground" class="checkbox" value="">Bear Meadow
+                  Campground</label>
+                <label><input type="checkbox" name="lakeside Campground" class="checkbox" value="">Lakeside
+                  Campground</label>
+                <label><input type="checkbox" name="leadfootCampground" class="checkbox" value="">Leadfoot
+                  Campground</label>
+                <label><input type="checkbox" name="talusCampground" class="checkbox" value="">Talus Campground</label>
+              </div>
+            </div>
+          </section>
+          <button type="submit" id="RegButton"><strong>Create Account</strong></button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="datetime">
+        <p>
+          <small>&#169;</small> <span class="shop">Ski National Park</span>
+          <time datetime="2021">2021</time>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./js/forIndex.js"></script>
+</body>
+
+</html>
